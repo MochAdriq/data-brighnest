@@ -1,0 +1,80 @@
+export const insights = [
+    {
+        id: 1,
+        title: "Dampak Tol Bocimi Seksi 3 terhadap Arus Logistik",
+        category: "Infrastructure",
+        desc: "Analisis efisiensi biaya pengiriman barang industri dari Cicurug ke Jakarta pasca pembukaan tol penuh.",
+        date: "2 hari lalu",
+        type: "line",
+        isPremium: true,
+        image: "https://radarsukabumi.com/wp-content/uploads/2024/08/Untitled-7.jpg",
+    },
+    {
+        id: 2,
+        title: "Lonjakan Kunjungan Wisatawan Geopark Ciletuh Q4 2025",
+        category: "Tourism",
+        desc: "Data demografi pengunjung lokal vs mancanegara serta dampak pada okupansi homestay di kawasan Ciemas.",
+        date: "4 hari lalu",
+        type: "bar",
+        isPremium: false,
+        image: "https://coin.economiczone.id/uploads/gallery/big/26982.jpg",
+    },
+    {
+        id: 3,
+        title: "Produktivitas Sentra Padi Sukabumi Selatan",
+        category: "Agriculture",
+        desc: "Perbandingan hasil panen gabah kering giling (GKG) di Jampang Kulon dan Surade tahun 2024-2025.",
+        date: "1 minggu lalu",
+        type: "bar",
+        isPremium: false,
+        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfdt7wRyV4B7-Mm7HQ2tu1U6vz7QjCQyF_9g&s",
+    },
+    {
+        id: 4,
+        title: "Ekspor Garmen & Sepatu: Tren Permintaan Eropa",
+        category: "Industries",
+        desc: "Kinerja ekspor pabrik padat karya di Sukalarang dan Cikembar di tengah isu resesi global.",
+        date: "1 minggu lalu",
+        type: "pie",
+        isPremium: true,
+        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbwEFl87fS5BqSVncOtIWUT6rusiYtISYrXA&s",
+    },
+    {
+        id: 5,
+        title: "Pertumbuhan UMKM Kopi Lokal Sukabumi",
+        category: "Digital",
+        desc: "Peta sebaran kedai kopi dan volume penjualan biji kopi lokal via marketplace.",
+        date: "2 minggu lalu",
+        type: "bar",
+        isPremium: false,
+        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSuE2ZkVjVFl7_lTwZMHD6QVMfB8BJEbjihfA&s",
+    },
+    {
+        id: 6,
+        title: "Indeks Harga Lahan Sekitar Exit Tol Cibadak",
+        category: "Property",
+        desc: "Prediksi kenaikan Nilai Jual Objek Pajak (NJOP) tanah residensial dan komersial di area penyangga tol.",
+        date: "3 minggu lalu",
+        type: "line",
+        isPremium: true,
+        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0JJSXE6d5oSuCJDFetwNwhHqDFBUo8nmnUg&s",
+    },
+];
+
+export const popularPosts = [
+    { id: 1, title: "Harga Tanah Cibadak Naik 25%", views: "15.2K" },
+    { id: 2, title: "Lowongan Kerja Pabrik Garmen Q1", views: "12.8K" },
+    {
+        id: 3,
+        title: "Wisata Situ Gunung Tembus 1 Juta Pengunjung",
+        views: "10.5K",
+    },
+    { id: 4, title: "Statistik Kecelakaan Jalur Cikidang", views: "8.9K" },
+];
+
+export const latestReports = [
+    "Laporan BPS Sukabumi Dalam Angka 2025",
+    "Masterplan Smart City Kota Sukabumi",
+    "Kajian Lingkungan Tambang Sukabumi",
+    "Potensi Investasi Kawasan Ekonomi Khusus (KEK) Cikidang",
+];
