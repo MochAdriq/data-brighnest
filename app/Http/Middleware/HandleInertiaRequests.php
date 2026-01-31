@@ -27,13 +27,34 @@ class HandleInertiaRequests extends Middleware
      *
      * @return array<string, mixed>
      */
+    // public function share(Request $request): array
+    // {
+    //     return array_merge(parent::share($request), [
+    //         'auth' => [
+    //             'user' => $request->user(),
+    //         ],
+    //         // TAMBAHAN: Kirim Data Kategori ke Seluruh Halaman
+    //         // 'globalCategories' => \App\Models\Category::orderBy('name')->get(),
+            
+    //         // Flash Message (Biar alert sukses muncul)
+    //         'flash' => [
+    //             'success' => fn () => $request->session()->get('success'),
+    //             'error' => fn () => $request->session()->get('error'),
+    //         ],
+    //     ]);
+    // }
+
     public function share(Request $request): array
     {
-        return [
-            ...parent::share($request),
+        return array_merge(parent::share($request), [
             'auth' => [
                 'user' => $request->user(),
             ],
-        ];
+            // 'categories' => \App\Models\Category::all(), <--- HAPUS ATAU KOMENTARI BARIS INI!!!
+            'flash' => [
+                'success' => fn () => $request->session()->get('success'),
+                'error' => fn () => $request->session()->get('error'),
+            ],
+        ]);
     }
 }

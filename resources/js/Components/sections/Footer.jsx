@@ -1,106 +1,83 @@
 import React from "react";
-import { Sparkles, MapPin, Mail, ArrowRight } from "lucide-react";
+import {
+    Sparkles,
+    MapPin,
+    Mail,
+    Phone,
+    Instagram,
+    Linkedin,
+    Youtube,
+    Facebook,
+} from "lucide-react";
+import { Link } from "@inertiajs/react";
 
 const Footer = () => {
     return (
-        <footer className="bg-[#0B1120] text-white pt-20 pb-10 border-t border-slate-800 relative overflow-hidden">
-            {/* CREATIVE TOUCH: Garis Gradasi di Atas */}
-            <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-600 via-indigo-500 to-purple-500"></div>
+        <footer className="bg-[#0B1120] text-slate-400 border-t border-slate-800 relative overflow-hidden text-sm">
+            {/* 1. ACCENT LINE (Tetap dipertahankan karena cantik) */}
+            <div className="absolute top-0 left-0 w-full h-0.5 bg-gradient-to-r from-blue-600 via-primary to-purple-500"></div>
 
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 mb-16">
-                    {/* KOLOM 1: BRANDING (Lebih Lebar - 4 Kolom) */}
-                    <div className="lg:col-span-4 space-y-6">
-                        {/* Logo Brightnest Versi Dark Mode */}
-                        <div className="flex items-center gap-3">
-                            <div className="bg-blue-500/10 p-2.5 rounded-xl border border-blue-500/20">
-                                <Sparkles className="w-6 h-6 text-blue-400 fill-blue-500/20" />
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 pb-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-12 mb-10">
+                    {/* === KOLOM 1: BRANDING (Compact) === */}
+                    <div className="lg:col-span-5 space-y-4">
+                        <div className="flex items-center gap-2">
+                            <div className="bg-primary/10 p-1.5 rounded-lg border border-primary/20">
+                                <Sparkles className="w-5 h-5 text-blue-400 fill-primary/20" />
                             </div>
-                            <div className="flex flex-col justify-center">
-                                <span className="text-2xl font-extrabold tracking-tight text-white leading-none">
-                                    Brightnest
-                                </span>
-                                <span className="text-[10px] font-bold text-slate-400 uppercase tracking-[0.25em] pl-0.5">
-                                    Institut
-                                </span>
-                            </div>
+                            <span className="text-xl font-extrabold text-white tracking-tight">
+                                Brightnest
+                            </span>
                         </div>
 
-                        <p className="text-slate-400 text-sm leading-relaxed pr-6">
-                            Lembaga riset independen yang mendedikasikan
-                            teknologi dan sains data untuk mengakselerasi
-                            kemajuan ekonomi serta kebijakan publik di Sukabumi
-                            Raya.
+                        <p className="leading-relaxed max-w-sm">
+                            Pusat intelijen data yang mendedikasikan teknologi
+                            untuk akselerasi ekonomi dan kebijakan publik di
+                            Sukabumi.
                         </p>
 
-                        {/* Info Kontak dengan Icon */}
-                        <div className="space-y-3 pt-4 border-t border-slate-800/50">
-                            <div className="flex items-center gap-3 text-sm text-slate-400 hover:text-white transition-colors cursor-pointer">
-                                <MapPin className="w-4 h-4 text-blue-500" />
-                                <span>Cikole, Kota Sukabumi, Jawa Barat</span>
+                        <div className="space-y-2 pt-2">
+                            <div className="flex items-start gap-3 hover:text-white transition-colors">
+                                <MapPin className="w-4 h-4 mt-0.5 text-primary" />
+                                <span>
+                                    Jl. Suryakencana No. 12, Cikole, Kota
+                                    Sukabumi
+                                </span>
                             </div>
-                            <div className="flex items-center gap-3 text-sm text-slate-400 hover:text-white transition-colors cursor-pointer">
-                                <Mail className="w-4 h-4 text-blue-500" />
+                            <div className="flex items-center gap-3 hover:text-white transition-colors">
+                                <Mail className="w-4 h-4 text-primary" />
                                 <span>halo@brightnest.id</span>
                             </div>
                         </div>
                     </div>
 
-                    {/* KOLOM 2: PROGRAM (2 Kolom) */}
-                    <div className="lg:col-span-2 lg:col-start-6">
-                        <h4 className="font-bold text-white mb-6 text-lg tracking-wide">
-                            Program
+                    {/* === KOLOM 2: NAVIGASI (Merged Program & Data) === */}
+                    <div className="lg:col-span-2 lg:col-start-7">
+                        <h4 className="font-bold text-white mb-4 tracking-wide">
+                            Platform
                         </h4>
-                        <ul className="space-y-4 text-sm text-slate-400">
+                        <ul className="space-y-2.5">
                             <li>
-                                <a
-                                    href="#"
-                                    className="hover:text-blue-400 transition-colors flex items-center gap-2 group"
+                                <Link
+                                    href="/"
+                                    className="hover:text-primary transition-colors"
                                 >
-                                    <ArrowRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />{" "}
-                                    Fellowship Riset
-                                </a>
+                                    Beranda
+                                </Link>
                             </li>
-                            <li>
-                                <a
-                                    href="#"
-                                    className="hover:text-blue-400 transition-colors flex items-center gap-2 group"
-                                >
-                                    <ArrowRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />{" "}
-                                    Bootcamp Data
-                                </a>
-                            </li>
-                            <li>
-                                <a
-                                    href="#"
-                                    className="hover:text-blue-400 transition-colors flex items-center gap-2 group"
-                                >
-                                    <ArrowRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />{" "}
-                                    Inkubator Bisnis
-                                </a>
-                            </li>
-                            <li>
-                                <a
-                                    href="#"
-                                    className="hover:text-blue-400 transition-colors flex items-center gap-2 group"
-                                >
-                                    <ArrowRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />{" "}
-                                    Summit 2026
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
 
-                    {/* KOLOM 3: PUSAT DATA (2 Kolom) */}
-                    <div className="lg:col-span-2">
-                        <h4 className="font-bold text-white mb-6 text-lg tracking-wide">
-                            Pusat Data
-                        </h4>
-                        <ul className="space-y-4 text-sm text-slate-400">
                             <li>
                                 <a
                                     href="#"
-                                    className="hover:text-blue-400 transition-colors"
+                                    className="hover:text-primary transition-colors"
+                                >
+                                    Pusat Data
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                    href="#"
+                                    className="hover:text-primary transition-colors"
                                 >
                                     Indikator Makro
                                 </a>
@@ -108,90 +85,106 @@ const Footer = () => {
                             <li>
                                 <a
                                     href="#"
-                                    className="hover:text-blue-400 transition-colors"
+                                    className="hover:text-primary transition-colors"
                                 >
                                     Peta Geospasial
                                 </a>
                             </li>
+                        </ul>
+                    </div>
+
+                    {/* === KOLOM 3: PROGRAM & LEGAL === */}
+                    <div className="lg:col-span-2">
+                        <h4 className="font-bold text-white mb-4 tracking-wide">
+                            Program
+                        </h4>
+                        <ul className="space-y-2.5">
                             <li>
                                 <a
                                     href="#"
-                                    className="hover:text-blue-400 transition-colors"
+                                    className="hover:text-primary transition-colors"
                                 >
-                                    Laporan Tahunan
+                                    Fellowship Riset
                                 </a>
                             </li>
                             <li>
                                 <a
                                     href="#"
-                                    className="hover:text-blue-400 transition-colors"
+                                    className="hover:text-primary transition-colors"
                                 >
-                                    Jurnal Open Access
+                                    Bootcamp Data
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                    href="#"
+                                    className="hover:text-primary transition-colors"
+                                >
+                                    Summit 2026
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                    href="#"
+                                    className="hover:text-primary transition-colors"
+                                >
+                                    Karir
                                 </a>
                             </li>
                         </ul>
                     </div>
 
-                    {/* KOLOM 4: LEGALITAS (2 Kolom) */}
+                    {/* === KOLOM 4: CONNECT (Socials) === */}
                     <div className="lg:col-span-2">
-                        <h4 className="font-bold text-white mb-6 text-lg tracking-wide">
-                            Legalitas
+                        <h4 className="font-bold text-white mb-4 tracking-wide">
+                            Ikuti Kami
                         </h4>
-                        <ul className="space-y-4 text-sm text-slate-400">
-                            <li>
-                                <a
-                                    href="#"
-                                    className="hover:text-blue-400 transition-colors"
-                                >
-                                    Kebijakan Privasi
-                                </a>
-                            </li>
-                            <li>
-                                <a
-                                    href="#"
-                                    className="hover:text-blue-400 transition-colors"
-                                >
-                                    Syarat Penggunaan
-                                </a>
-                            </li>
-                            <li>
-                                <a
-                                    href="#"
-                                    className="hover:text-blue-400 transition-colors"
-                                >
-                                    Lisensi Data
-                                </a>
-                            </li>
-                            <li>
-                                <a
-                                    href="#"
-                                    className="hover:text-blue-400 transition-colors"
-                                >
-                                    FAQ
-                                </a>
-                            </li>
-                        </ul>
+                        <div className="flex gap-3 mb-6">
+                            <a
+                                href="#"
+                                className="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center hover:bg-primary hover:text-white transition-all"
+                            >
+                                <Instagram className="w-4 h-4" />
+                            </a>
+                            <a
+                                href="#"
+                                className="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center hover:bg-primary hover:text-white transition-all"
+                            >
+                                <Linkedin className="w-4 h-4" />
+                            </a>
+                            <a
+                                href="#"
+                                className="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center hover:bg-primary hover:text-white transition-all"
+                            >
+                                <Youtube className="w-4 h-4" />
+                            </a>
+                            <a
+                                href="#"
+                                className="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center hover:bg-primary hover:text-white transition-all"
+                            >
+                                <Facebook className="w-4 h-4" />
+                            </a>
+                        </div>
+
+                        {/* Legal Links Kecil */}
+                        <div className="flex flex-col gap-2 text-xs text-slate-500">
+                            <a href="#" className="hover:text-slate-300">
+                                Kebijakan Privasi
+                            </a>
+                            <a href="#" className="hover:text-slate-300">
+                                Syarat Ketentuan
+                            </a>
+                        </div>
                     </div>
                 </div>
 
-                {/* BOTTOM COPYRIGHT */}
-                <div className="pt-8 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4">
-                    <p className="text-slate-500 text-xs">
-                        © 2026 Brightnest Institut. Hak Cipta Dilindungi. Built
-                        with ❤️ for Sukabumi.
+                {/* === COPYRIGHT (Sangat Tipis) === */}
+                <div className="pt-6 border-t border-slate-800/50 flex flex-col md:flex-row justify-between items-center gap-3">
+                    <p className="text-xs text-slate-500">
+                        &copy; 2026 Brightnest Institut. Built with{" "}
+                        <span className="text-red-500">❤</span> for Sukabumi.
                     </p>
-
-                    <div className="flex gap-4">
-                        {/* Social Media Placeholders (Circles) */}
-                        {[1, 2, 3, 4].map((i) => (
-                            <div
-                                key={i}
-                                className="w-8 h-8 rounded-full bg-slate-800 hover:bg-blue-600 hover:text-white flex items-center justify-center transition-all cursor-pointer group"
-                            >
-                                <span className="w-4 h-4 bg-slate-500 group-hover:bg-white rounded-sm transition-colors"></span>
-                            </div>
-                        ))}
-                    </div>
+                    {/* <p className="text-xs text-slate-600">Versi 1.0.0 (Beta)</p> */}
                 </div>
             </div>
         </footer>

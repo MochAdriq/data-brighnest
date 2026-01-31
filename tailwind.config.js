@@ -14,8 +14,8 @@ export default {
         extend: {
             // INI BAGIAN YANG DITAMBAHKAN DARI KODE LAMA BOSS:
             colors: {
-                primary: "#0056D2",
-                secondary: "#F3F4F6",
+                primary: "#1d1f9a",
+                secondary: "#F59E0B",
             },
         },
     },

@@ -1,23 +1,34 @@
 import React from "react";
-// Perhatikan path import-nya berubah menyesuaikan struktur folder baru
-import Navbar from "@/Components/sections/Navbar";
-import Hero from "@/Components/sections/Hero";
+import { Head } from "@inertiajs/react"; // Opsional, buat judul tab
+// import Navbar from "@/Components/sections/Navbar";
+// import Hero from "@/Components/sections/Hero";
 import ContentSection from "@/Components/sections/ContentSection";
-import Footer from "@/Components/sections/Footer";
+// import Footer from "@/Components/sections/Footer";
+import PublicLayout from "@/Layouts/PublicLayout";
 
-// Import CSS tidak perlu lagi di sini karena sudah otomatis di-load Laravel
-// Hapus baris: import './App.css' jika ada.
+// 1. TERIMA PROPS 'auth' DARI LARAVEL
+export default function Welcome({
+    articles,
+    featuredArticle,
+    categories,
+    popularArticles,
+}) {
+    // Terima props baru
+    const listArtikel = articles?.data || [];
 
-function Welcome() {
-    // Ganti nama fungsi App jadi Welcome (opsional, tapi rapi)
+    const heroData = {
+        featuredArticle: featuredArticle,
+    };
     return (
-        <div className="min-h-screen bg-white">
-            <Navbar />
-            <Hero />
-            <ContentSection />
-            <Footer />
-        </div>
+        <PublicLayout heroData={heroData}>
+            <div className="min-h-screen bg-white">
+                <Head title="Brightnest - Pusat Data Daerah" />
+
+                <ContentSection
+                    articles={articles}
+                    popularArticles={popularArticles}
+                />
+            </div>
+        </PublicLayout>
     );
 }
-
-export default Welcome;

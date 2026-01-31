@@ -1,17 +1,34 @@
-import ApplicationLogo from '@/Components/ApplicationLogo';
-import { Link } from '@inertiajs/react';
+import { Link } from "@inertiajs/react";
 
-export default function GuestLayout({ children }) {
+export default function Guest({ children }) {
     return (
-        <div className="flex min-h-screen flex-col items-center bg-gray-100 pt-6 sm:justify-center sm:pt-0">
-            <div>
+        <div className="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0 bg-gray-50">
+            {/* Background Decoration (Opsional: Lingkaran samar) */}
+            <div className="absolute top-0 left-0 w-full h-full overflow-hidden -z-10 pointer-events-none">
+                <div className="absolute top-0 left-1/4 w-96 h-96 bg-blue-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob"></div>
+                <div className="absolute top-0 right-1/4 w-96 h-96 bg-yellow-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob animation-delay-2000"></div>
+            </div>
+
+            {/* Logo Section */}
+            <div className="mb-6 text-center">
                 <Link href="/">
-                    <ApplicationLogo className="h-20 w-20 fill-current text-gray-500" />
+                    <h1 className="text-4xl font-extrabold text-blue-600 tracking-tight">
+                        BrightNest
+                    </h1>
+                    <p className="text-gray-500 text-sm mt-1">
+                        Portal Data & Aspirasi Sukabumi
+                    </p>
                 </Link>
             </div>
 
-            <div className="mt-6 w-full overflow-hidden bg-white px-6 py-4 shadow-md sm:max-w-md sm:rounded-lg">
+            {/* Card Form Container */}
+            <div className="w-full sm:max-w-md mt-6 px-8 py-8 bg-white shadow-xl overflow-hidden sm:rounded-xl border border-gray-100">
                 {children}
+            </div>
+
+            {/* Footer Copyright */}
+            <div className="mt-8 text-center text-xs text-gray-400">
+                &copy; 2024 BrightNest Eval. All rights reserved.
             </div>
         </div>
     );
